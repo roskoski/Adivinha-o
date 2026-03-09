@@ -1,11 +1,23 @@
-Código da ultima aula do Jogo de Adivinhação
-
+import random
 print("*********************************")
 print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
+numero_secreto = random.randrange(1,101)
 total_de_tentativas = 3
+pontos = 1000
+
+print("Qual o nível de dificuldade?")
+print("(1) Fácil (2) Médio (3) Difícil")
+
+nivel= int(input("defina o nivel:"))
+
+if (nivel == 1):
+    total_de_tentativas = 20
+    elif (nivel == 2):
+        total_de_tentativas = 10
+        else (nivel == 3):
+            total_de_tentativas = 5p
 
 for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}".format(rodada, total_de_tentativas))
